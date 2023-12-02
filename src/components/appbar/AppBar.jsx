@@ -17,7 +17,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 import LoginIcon from '@mui/icons-material/Login';
 
-const pages = ['Página principal', 'Productos'];
+const pages = ['Productos'];
 const settings = ['Login', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -47,7 +47,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/Login"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -97,7 +97,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -114,7 +114,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            DISTRIFRUTAS
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -122,8 +122,9 @@ function ResponsiveAppBar() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                style={{color: "white"}}
               >
-                <Link href="/">
+                <Link href={`/products`} >
                 {page}
                 </Link>
               </Button>

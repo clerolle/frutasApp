@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import styles from "./NewLogin.module.css";
+import Link from 'next/link';
 
 
 const NewLogin = () => {
@@ -20,7 +21,15 @@ const NewLogin = () => {
 
     const submit = (e) => {
         e.preventDefault();
-        console.log("ingresa acá");
+        if(user.name !== "" && user.password !== ""){
+            <Link href={"/products"}/>
+        }else if(user.name !== "" && user.password === ""){
+            console.log("ingresar password")
+        }else if(user.name === "" && user.password !== ""){
+            console.log("ingresar usuario")
+        }else{
+            console.log("usuario y contraseña erronea")
+        }
     }
     return ( 
             <form onSubmit={submit}>

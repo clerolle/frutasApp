@@ -47,18 +47,18 @@ export default function ReviewCard(props) {
             <MoreVertIcon />
           </IconButton>
         }
-        title={props.fruit.name}
+        title={props.fruit?.name}
         subheader="September 14, 2016"
       />
       <CardMedia
         component="img"
         height="194"
-        image={props.fruit.img}
+        image={props.fruit?.img}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {props.fruit.description}
+          {props.fruit?.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
