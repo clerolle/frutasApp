@@ -27,8 +27,8 @@ export default function Home() {
     <main /* className={styles.main} */>
       <ResponsiveAppBar />
       <br />
-      <Grid container justifyContent={"center"} alignContent={"center"}>
-        <Grid display={"flex"}>
+      <Grid container justifyContent={"center"} alignContent={"center"} >
+        <Grid item display={"flex"}>
          {fruits.map(fruit => 
             <ReviewCard fruit={fruit} key={fruit.name}/>
           )} 
