@@ -12,9 +12,13 @@ export default function Home() {
     <main>
       <ResponsiveAppBar/>
       <br />
+      <div className={styles.title}>
+        <h3 >BIENVENIDO A DISTRIBUIDORA DE FRUTAS EL EDEN </h3>
+        <p>Para hacer su pedido por favor iniciar sesión</p>
+      </div>
       <br />
       <Grid container justifyContent={"center"}>
-      <SwipeableTextMobileStepper/>
+        <SwipeableTextMobileStepper/>
       </Grid>
     </main>
   );

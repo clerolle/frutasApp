@@ -117,7 +117,7 @@ function ResponsiveAppBar() {
             DISTRIFRUTAS
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {/* {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -128,7 +128,7 @@ function ResponsiveAppBar() {
                 {page}
                 </Link>
               </Button>
-            ))}
+            ))} */}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

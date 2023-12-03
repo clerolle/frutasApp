@@ -29,13 +29,24 @@ const ExpandMore = styled((props) => {
 
 export default function ReviewCard(props) {
   const [expanded, setExpanded] = useState(false);
-
+  const [date, setDate] = useState(new Date());
+  
+  const day =
+      date.getDate() > 9
+          ? date.getDate().toString()
+          : '0' + date.getDate().toString();
+  const month =
+      date.getMonth() > 8
+          ? (date.getMonth() + 1).toString()
+          : 0 + (date.getMonth() + 1).toString();
+  const year = date.getFullYear().toString();
+    
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   return (
-    <Card sx={{ maxWidth: 400 }}  style={{background: "grey"}} className='mb-2'>
+    <Card sx={{ maxWidth: 500 }}  style={{background: "grey"}}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: orange[500] }} aria-label="recipe">
@@ -48,17 +59,17 @@ export default function ReviewCard(props) {
           </IconButton>
         }
         title={props.fruit?.name}
-        subheader="September 14, 2016"
+        subheader={day + '-' + month + '-' + year}
       />
       <CardMedia
         component="img"
         height="194"
         image={props.fruit?.img}
-        alt="Paella dish"
+        alt="frutas"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {props.fruit?.description}
+          {props.fruit?.family}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -79,31 +90,25 @@ export default function ReviewCard(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
+          <Typography paragraph>Descripción:</Typography>
+          {/* <Typography paragraph>
             Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
             aside for 10 minutes.
-          </Typography>
+          </Typography> */}
           <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-            medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-            occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-            large plate and set aside, leaving chicken and chorizo in the pan. Add
-            pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-            stirring often until thickened and fragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+           {props.fruit.description}
           </Typography>
-          <Typography paragraph>
+          {/* <Typography paragraph>
             Add rice and stir very gently to distribute. Top with artichokes and
             peppers, and cook without stirring, until most of the liquid is absorbed,
             15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
             mussels, tucking them down into the rice, and cook again without
             stirring, until mussels have opened and rice is just tender, 5 to 7
             minutes more. (Discard any mussels that don&apos;t open.)
-          </Typography>
-          <Typography>
+          </Typography> */}
+          {/* <Typography>
             Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography>
+          </Typography> */}
         </CardContent>
       </Collapse>
     </Card>

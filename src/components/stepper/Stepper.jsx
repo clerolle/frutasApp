@@ -22,12 +22,22 @@ const images = [
   {
     label: 'Sandia',
     imgPath:
-      '/sandia.jpeg',
+      '/sandias.jpeg',
   },
   {
-    label: 'Bali, Indonesia',
+    label: 'Fresa',
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
+      '/fresas.jpeg',
+  },
+  {
+    label: 'Guanabana',
+    imgPath:
+      '/guanabana.jpeg',
+  },
+  {
+    label: 'Mango',
+    imgPath:
+      '/mango.jpeg',
   }
 ];
 
@@ -49,7 +59,7 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, height: 500,  flexGrow: 1, justifyContent: "center", justifyItems: "center" }}>
+    <Box sx={{ maxWidth: 400, height: 500,  flexGrow: 1 }}>
       <Paper
         square
         elevation={0}
@@ -98,7 +108,7 @@ function SwipeableTextMobileStepper() {
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
-            Next
+            Siguiente
             {theme.direction === 'rtl' ? (
               <KeyboardArrowLeft />
             ) : (
@@ -113,7 +123,7 @@ function SwipeableTextMobileStepper() {
             ) : (
               <KeyboardArrowLeft />
             )}
-            Back
+            Anterior
           </Button>
         }
       />
