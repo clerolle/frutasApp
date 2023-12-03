@@ -15,6 +15,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+// import Box from '@mui/material/Box';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -46,7 +47,19 @@ export default function ReviewCard(props) {
   };
 
   return (
-    <Card sx={{ maxWidth: 500 }}  style={{background: "grey"}}>
+    // <Box sx={{
+    //   display: 'flex',
+    //   // flexWrap: 'wrap',
+    //   alignContent: 'flex-start',
+    //   p: 2,
+    //   m: 2,
+    //   bgcolor: 'background.paper',
+    //   width: 500,
+    //   height: 500,
+    //   borderRadius: 1,
+    //   background: "transparent"
+    // }} >
+    <Card  sx={{ maxWidth: 400 }}  style={{background: "grey", margin: "2rem"}} >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: orange[500] }} aria-label="recipe">
@@ -91,10 +104,6 @@ export default function ReviewCard(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Descripción:</Typography>
-          {/* <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-            aside for 10 minutes.
-          </Typography> */}
           <Typography paragraph>
            {props.fruit.description}
           </Typography>
@@ -112,5 +121,6 @@ export default function ReviewCard(props) {
         </CardContent>
       </Collapse>
     </Card>
+    // </Box>
   );
 }

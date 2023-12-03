@@ -25,28 +25,23 @@ function PageProdcuts(props) {
         name: "Fresa",
         family: "La fresa o frutilla (Fragaria) es un género de plantas rastreras estoloníferas de la familia Rosaceae.",
         description: "Son plantas herbáceas, perennifolias, con rizomas y estolones epigeos más o menos desarrollados, que enraízan en los nudos donde nacen hojas arrosetadas tri-partidas. Los tallos son generalmente simples, más o menos erectos y anuales. Las hojas se agrupan en falsas rosetas, con los segmentos ovalo-rómbicos, distalmente dentados. Las inflorescencias se organizan en cimas con brácteas. Las flores, hermafroditas o funcionalmente unisexuales, tienen un receptáculo con la zona axial algo cónica, acrescente y carnosa en la fructificación. Los 5 sépalos son lanceolados y en general enteros, más o menos acrescentes, erectos, patentes o reflejos en la fructificación. El calículo tiene 5 piezas más estrechas que los sépalos y son usualmente enteros. Los pétalos, en general en número de 5, son habitualmente mayores que los sépalos; son obovados, no escotados, con la uña corta, blancos, blanco-verdosos o de color crema. Hay unos 10-20 estambres y numerosos carpelos libres implantados en la zona axial del receptáculo. El fruto es un poliaquenio de aquenios ovoides incrustados en dicho receptáculo (eterio) que se vuelve carnoso al madurar."
-      }/*,{
+      }/* ,{
         img: "/guanabana.jpeg",
         name: "Guanabana",
-        family: "Citrullus lanatus, comúnmente llamada melón de agua, sandía, acendría, sindria, patilla, es una especie de la familia Cucurbitaceae. Es originaria de África con una gran presencia y difusión en todo el mundo. Se cultiva de manera extendida por todo el mundo debido a su fruto, el cual es un pepónide de enorme tamaño (el récord entre las frutas fue una de 120 kg).",
+        family: "Citrullus lanatus, comúnmente llamada melón de agua, sandía, acendría, sindria, patilla, es una especie de la familia Cucurbitaceae.",
         description: "Citrullus lanatus, comúnmente llamada melón de agua, sandía, acendría, sindria, patilla, es una especie de la familia Cucurbitaceae. Es originaria de África con una gran presencia y difusión en todo el mundo. Se cultiva de manera extendida por todo el mundo debido a su fruto, el cual es un pepónide de enorme tamaño (el récord entre las frutas fue una de 120 kg)."
-      },{
+      } ,{
         img: "/mango.jpeg",
         name: "Mango",
         family: "Citrullus lanatus, comúnmente llamada melón de agua, sandía, acendría, sindria, patilla, es una especie de la familia Cucurbitaceae. Es originaria de África con una gran presencia y difusión en todo el mundo. Se cultiva de manera extendida por todo el mundo debido a su fruto, el cual es un pepónide de enorme tamaño (el récord entre las frutas fue una de 120 kg).",
         description: "Citrullus lanatus, comúnmente llamada melón de agua, sandía, acendría, sindria, patilla, es una especie de la familia Cucurbitaceae. Es originaria de África con una gran presencia y difusión en todo el mundo. Se cultiva de manera extendida por todo el mundo debido a su fruto, el cual es un pepónide de enorme tamaño (el récord entre las frutas fue una de 120 kg)."
-      },{
-        img: "/sandia.jpeg",
-        name: "Sandia",
-        family: "Citrullus lanatus, comúnmente llamada melón de agua, sandía, acendría, sindria, patilla, es una especie de la familia Cucurbitaceae. Es originaria de África con una gran presencia y difusión en todo el mundo. Se cultiva de manera extendida por todo el mundo debido a su fruto, el cual es un pepónide de enorme tamaño (el récord entre las frutas fue una de 120 kg).",
-        description: "Citrullus lanatus, comúnmente llamada melón de agua, sandía, acendría, sindria, patilla, es una especie de la familia Cucurbitaceae. Es originaria de África con una gran presencia y difusión en todo el mundo. Se cultiva de manera extendida por todo el mundo debido a su fruto, el cual es un pepónide de enorme tamaño (el récord entre las frutas fue una de 120 kg)."
-      } */])
+      } */ ])
     
     return (
         <div>
             <ResponsiveAppBar />
             <br />
-            <Grid container justifyContent={"center"} columnSpacing={2} rowSpacing={2} >
+            <Grid container  direction={"columns"} justifyContent={"center"} >
                 <Grid item display={"flex"}>
                 {fruits.map(fruit => 
                     <ReviewCard fruit={fruit} key={fruit.name}/>

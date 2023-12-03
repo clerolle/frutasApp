@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from "./NewLogin.module.css";
 import { useRouter } from 'next/navigation';
 import { SnackbarProvider, enqueueSnackbar } from 'notistack';
+import {ApiLogin} from '../api/ApiLogin';
 
 
 const NewLogin = () => {
@@ -30,8 +31,14 @@ const NewLogin = () => {
     const submit = (e) => {
         e.preventDefault();
         if(user.name !== "" && user.password !== ""){
-                enqueueSnackbar('Inicio de sesión exitosa', { variant: 'success' });
-                router.push("/products");
+                let isValidate = ApiLogin(user.name, user.password);
+                console.log(isValidate);
+                if(isValidate ){
+                    enqueueSnackbar('Inicio de sesión exitosa', { variant: 'success' });
+                    router.push("/products");
+                }else{
+                    enqueueSnackbar('usuario o contraseña erroneos', { variant: 'warning' });
+                }
         }else if(user.name !== "" && user.password === ""){
             enqueueSnackbar('Todos los campos son obligatorios, contraseña erronea', { variant: 'warning' })
         }else if(user.name === "" && user.password !== ""){
