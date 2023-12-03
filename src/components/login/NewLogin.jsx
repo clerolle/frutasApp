@@ -2,16 +2,22 @@
 import React, { useState } from 'react';
 import styles from "./NewLogin.module.css";
 import { useRouter } from 'next/navigation';
+import { SnackbarProvider, enqueueSnackbar } from 'notistack';
 
 
 const NewLogin = () => {
 
+    // Router Instance
     const router = useRouter();
 
+    // Local State
     const [user, setUser] = useState({
         name: "",
         password: ""
     })
+
+    // Snackbar Instance
+    // const { enqueueSnackbar } = useSnackbar()
 
     const handleChange= (e) => {
         setUser({
@@ -24,17 +30,19 @@ const NewLogin = () => {
     const submit = (e) => {
         e.preventDefault();
         if(user.name !== "" && user.password !== ""){
+                enqueueSnackbar('Inicio de sesión exitosa', { variant: 'success' });
                 router.push("/products");
         }else if(user.name !== "" && user.password === ""){
-            console.log("ingresar password")
+            enqueueSnackbar('Todos los campos son obligatorios, contraseña erronea', { variant: 'warning' })
         }else if(user.name === "" && user.password !== ""){
-            console.log("ingresar usuario")
+            enqueueSnackbar('Todos los campos son obligatorios,  usuario erroneo', { variant: 'warning' })
         }else{
-            console.log("usuario y contraseña erronea")
+            enqueueSnackbar('Todos los campos son obligatorios, usuario y contraseña erroneos', { variant: 'warning' })
         }
     }
     return ( 
             <form onSubmit={submit}>
+                <SnackbarProvider />
                 <div className={styles.container}>
                 <div className={styles.header}>
                     <div className={styles.text}>

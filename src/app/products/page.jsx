@@ -14,7 +14,7 @@ function PageProdcuts(props) {
         img: "/melon.jpeg",
         name: "Melon",
         family: "Cucumis melo, llamado comúnmente melón, es una especie de la familia de las cucurbitáceas.",
-        description: ""
+        description: "Planta anual monoica de tallos rastreros. Se cultiva por de temporada veraniega con un gran contenido de agua y de sabor dulce. La planta posee tallos blandos y pilosos que crecen a ras del suelo. Sus hojas tienen peciolo acanalado y son palmadas, es decir, su aspecto es semejante al de una mano.  Su fruto es una baya pepónide con forma desde esférica hasta elipsoidal. En los llamados melones plátano existen ondulaciones que los hacen parecer una calabaza.  Su tamaño depende de la variedad y de las condiciones de cultivo. Pero suele ser de un mayor tamaño que otras frutas. De este modo, hay melones pequeños que pesan alrededor de 400 g y otros muy grandes que pueden pesar 20 kg o más. El tallo es cilíndrico, de 1 a 3 m de altura, con una inflorescencia terminal en forma de espiga compuesta por flores bisexuales. El grano es una cariópside de alrededor de 4 mm de diámetro. Tiene inflorescencias en panojas y semillas de 3 mm, esféricas y oblongas, de color negro, rojizo y amarillento. Tiene un sistema radicular que puede llegar en terrenos permeables a 2 m de profundidad. Las flores tienen estambres y pistilos. En las variedades más usadas habitualmente, los pesos de los frutos fluctúan entre más de medio kilo y menos de cinco."
       },{
         img: "/sandias.jpeg",
         name: "Sandia",
