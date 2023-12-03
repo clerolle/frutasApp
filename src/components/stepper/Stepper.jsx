@@ -62,10 +62,11 @@ function SwipeableTextMobileStepper() {
     <Box sx={{ maxWidth: 400, height: 500,  flexGrow: 1 }}>
       <Paper
         square
-        elevation={0}
+        elevation={2}
         sx={{
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'center',
           height: 50,
           pl: 2,
           bgcolor: 'background.default',

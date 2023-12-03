@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from 'react';
 import styles from "./NewLogin.module.css";
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 
 const NewLogin = () => {
+
+    const router = useRouter();
 
     const [user, setUser] = useState({
         name: "",
@@ -22,7 +24,7 @@ const NewLogin = () => {
     const submit = (e) => {
         e.preventDefault();
         if(user.name !== "" && user.password !== ""){
-            <Link href={"/products"}/>
+                router.push("/products");
         }else if(user.name !== "" && user.password === ""){
             console.log("ingresar password")
         }else if(user.name === "" && user.password !== ""){
