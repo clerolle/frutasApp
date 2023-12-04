@@ -49,7 +49,7 @@ function PageProdcuts(props) {
       } ])
     
     return (
-        <div>
+        <div style={{background: "black"}}>
             <ResponsiveAppBar />
             <br />
             <Grid container  direction={"columns"} justifyContent={"center"} >
