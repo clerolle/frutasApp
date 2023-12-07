@@ -27,7 +27,6 @@ const NewLogin = () => {
         })
     }
 
-
     const submit = (e) => {
         e.preventDefault();
         if(user.name !== "" && user.password !== ""){
