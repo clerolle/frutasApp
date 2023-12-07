@@ -66,6 +66,7 @@ const NewLogin = () => {
                         id='name' 
                         value={user.name} 
                         onChange={(e)=> handleChange(e)} 
+                        fullwidth
                     />
                 </div>
                 <div className={styles.input}>
@@ -75,6 +76,7 @@ const NewLogin = () => {
                         placeholder="Ingrese contraseña" 
                         name='password' 
                         id='password' 
+                        fullwidth
                         value={user.password} 
                         onChange={(e)=> handleChange(e)} 
                     />

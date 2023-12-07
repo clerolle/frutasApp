@@ -1,11 +1,33 @@
+"use client";
 import styles from "./page.module.css";
 import NewLogin from "@/components/login/NewLogin";
 import ResponsiveAppBar from "@/components/appbar/AppBar";
 import SwipeableTextMobileStepper from "@/components/stepper/Stepper";
 import { Grid } from "@mui/material";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { getInfo } from "@/redux/features/info/infoSlice";
 
 export default function Home() {
 
+  // Redux
+  const dispatch = useDispatch();
+  
+  useEffect(()=>{
+    fetch("https://pokeapi.co/api/v2/pokemon/")
+          .then((res) => res.json())
+          .then((data) => {
+            dispatch(getInfo(data.results));
+          });
+  },[])
+
+  // useEffect(()=>{
+  //   fetch("https://www.fruityvice.com/api/fruit/all")
+  //         .then((res) => res.json())
+  //         .then((data) => {
+  //           dispatch(getInfo(data.results));
+  //         });
+  // },[])
   
 
   return (
