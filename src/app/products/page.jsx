@@ -52,8 +52,8 @@ function PageProdcuts(props) {
         <div style={{background: "black"}}>
             <ResponsiveAppBar />
             <br />
-            <Grid container  direction={"columns"} justifyContent={"center"} >
-                <Grid item /* display={"flex"} */>
+            <Grid container >
+                <Grid item display={"flex"} flexWrap={'wrap'} justifyContent={"center"} gap={5}>
                 {fruits.map(fruit => 
                     <Item key={fruit.name}>
                       <ReviewCard fruit={fruit} key={fruit.name}/>
