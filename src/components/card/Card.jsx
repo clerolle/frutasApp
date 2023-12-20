@@ -15,7 +15,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-// import Box from '@mui/material/Box';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -47,18 +46,6 @@ export default function ReviewCard(props) {
   };
 
   return (
-    // <Box sx={{
-    //   display: 'flex',
-    //   // flexWrap: 'wrap',
-    //   alignContent: 'flex-start',
-    //   p: 2,
-    //   m: 2,
-    //   bgcolor: 'background.paper',
-    //   width: 500,
-    //   height: 500,
-    //   borderRadius: 1,
-    //   background: "transparent"
-    // }} >
     <div data-testid="todo-1">
     <Card  sx={{ maxWidth: 400 }}  style={{background: "grey", margin: "2rem"}} >
       <CardHeader
@@ -109,12 +96,7 @@ export default function ReviewCard(props) {
            {props.fruit.description}
           </Typography>
           {/* <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and
-            peppers, and cook without stirring, until most of the liquid is absorbed,
-            15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-            mussels, tucking them down into the rice, and cook again without
-            stirring, until mussels have opened and rice is just tender, 5 to 7
-            minutes more. (Discard any mussels that don&apos;t open.)
+            Add rice and stir very gently to distribute.
           </Typography> */}
           {/* <Typography>
             Set aside off of the heat to let rest for 10 minutes, and then serve.
@@ -123,6 +105,5 @@ export default function ReviewCard(props) {
       </Collapse>
     </Card>
     </div>
-    // </Box>
   );
 }
