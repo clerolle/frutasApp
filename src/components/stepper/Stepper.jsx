@@ -49,7 +49,7 @@ function SwipeableTextMobileStepper() {
 
     // Redux State Extraction
     const info = useSelector(state => state.info);
-    console.log(info);
+    // console.log(info);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
