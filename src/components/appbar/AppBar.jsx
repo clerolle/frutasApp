@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" color='secondary'>
+    <AppBar position="static" color='primary'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -134,7 +134,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} >
-                <Avatar style={{background:"orange"}}>
+                <Avatar style={{background:"gray"}}>
                   <LoginIcon/>
                 </Avatar>
               </IconButton>

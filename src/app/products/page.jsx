@@ -16,7 +16,7 @@ const Item = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.mode === '#1A2027',
   border: '1px solid',
   borderColor: theme.palette.mode === 'dark' ? '#444d58' : '#444d58',
-  boxShadow: "10px 10px 30px black",
+  boxShadow: "10px 10px 30px 5px white",
   padding: theme.spacing(1),
   borderRadius: '4px',
   textAlign: 'center',
