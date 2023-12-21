@@ -4,6 +4,7 @@ import styles from "./NewLogin.module.css";
 import { useRouter } from 'next/navigation';
 import { SnackbarProvider, enqueueSnackbar } from 'notistack';
 import {ApiLogin} from '../api/ApiLogin';
+import { Grid } from '@mui/material';
 
 
 const NewLogin = () => {
@@ -48,43 +49,45 @@ const NewLogin = () => {
     }
     return ( 
             <form onSubmit={submit}>
+                <Grid container>
                 <SnackbarProvider />
-                <div className={styles.container}>
-                <div className={styles.header}>
-                    <div className={styles.text}>
-                        Mercadolandia 
-                    </div>
-                </div>
-                <div className={styles.inputs}>
-                <div className={styles.input}>
-                    <img src="/person.png" alt="person" />
-                    <input 
-                        type="text" 
-                        placeholder="Ingrese usuario" 
-                        name='name' 
-                        id='name' 
-                        value={user.name} 
-                        onChange={(e)=> handleChange(e)} 
-                        fullwidth
-                    />
-                </div>
-                <div className={styles.input}>
-                    <img src="/password.png" alt="password" />
-                    <input 
-                        type="password" 
-                        placeholder="Ingrese contraseña" 
-                        name='password' 
-                        id='password' 
-                        fullwidth
-                        value={user.password} 
-                        onChange={(e)=> handleChange(e)} 
-                    />
-                </div >
-                </div>
-                <button className={styles.submit} type="submit">
-                     Iniciar sesión
-                </button>
-                </div>
+                    <Grid item className={styles.container} xs={10} md={6}>
+                        <Grid className={styles.header}>
+                            <Grid className={styles.text}>
+                                Mercadolandia 
+                            </Grid>
+                        </Grid>
+                        <Grid className={styles.inputs} >
+                            <Grid className={styles.input}>
+                                <img src="/person.png" alt="person" />
+                                <input 
+                                    type="text" 
+                                    placeholder="Ingrese usuario" 
+                                    name='name' 
+                                    id='name' 
+                                    value={user.name} 
+                                    onChange={(e)=> handleChange(e)} 
+                                    fullwidth
+                                />
+                            </Grid>
+                            <Grid className={styles.input}>
+                                <img src="/password.png" alt="password" />
+                                <input 
+                                    type="password" 
+                                    placeholder="Ingrese contraseña" 
+                                    name='password' 
+                                    id='password' 
+                                    fullwidth
+                                    value={user.password} 
+                                    onChange={(e)=> handleChange(e)} 
+                                />
+                            </Grid >
+                        </Grid>
+                        <button className={styles.submit} type="submit">
+                             Iniciar sesión
+                        </button>
+                    </Grid>
+                </Grid>
             </form>
      );
 }
