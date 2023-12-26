@@ -1,5 +1,5 @@
 "use client";
-import * as React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
@@ -43,13 +43,19 @@ const images = [
 ];
 
 function SwipeableTextMobileStepper() {
+  
+  // styles 
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
+
+  // local state
+  const [activeStep, setActiveStep] = useState(0);
+
+
   const maxSteps = images.length;
 
-    // Redux State Extraction
-    const info = useSelector(state => state.info);
-    // console.log(info);
+  // Redux State Extraction
+  const info = useSelector(state => state.info);
+  // console.log(info);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
